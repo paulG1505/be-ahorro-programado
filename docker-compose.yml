@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: ahorrodb
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ahorrodb
+      MYSQL_USER: paul
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./scripts/db.sql:/docker-entrypoint-initdb.d/1.sql"

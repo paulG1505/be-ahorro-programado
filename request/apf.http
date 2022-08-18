@@ -1,0 +1,37 @@
+@api = http://127.0.0.1:3000
+
+##All Parametric
+GET {{api}}/apf
+
+###actualizacion  parametric
+PUT {{api}}/apf/1
+content-type: application/json
+
+{
+  "mont_min_apert": 10,
+  "dur_plan_min": 3,
+  "tasa_int_min": 3,
+  "tasa_int_base": 5,
+  "tasa_int_max": 7
+}
+
+
+### Get Customer by ID
+GET {{api}}/customer/1
+
+
+### Get Account by ID
+GET {{api}}/account/1
+
+
+### Create  Account
+POST {{api}}
+Content-Type: application/json
+
+{
+  "num_cuenta": "1415161718",
+  "disponible": 15,
+  "fecha_apertura":"2022-08-17",
+  "id_cliente": 1,
+  "estado":"A"
+}
