@@ -2,11 +2,16 @@ import { connect } from '../database'
 
 
 export const getCustomer = async (req, res) => {
-    const connection = await connect();
-    const [rows] = await connection.query("Select * from cliente where id = ?", [
-        req.params.id
-    ]);
-    rows.length > 0 ? res.json(rows[0]) : res.json({ result: "No hay datos" })
+    try {
+        const connection = await connect();
+        const [rows] = await connection.query("Select * from cliente where id_cliente = ?", [
+            req.params.id
+        ]);
+        rows.length > 0 ? res.json(rows[0]) : res.json({ result: "No hay datos" })
+
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 
