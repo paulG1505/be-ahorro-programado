@@ -10,6 +10,7 @@ import { options } from './swaggerOptions'
 
 const specs = swaggerJSDoc(options)
 const app1 = express();
+app1.disable("x-powered-by");
 
 let corsOptions = {
     origin: 'localhost.com' // Compliant
