@@ -9,16 +9,20 @@ import swaggerUI from 'swagger-ui-express';
 import { options } from './swaggerOptions'
 
 const specs = swaggerJSDoc(options)
-const app = express();
+const app1 = express();
 
+let corsOptions = {
+    origin: 'localhost.com' // Compliant
+};
 
-app.use(cors());
-app.use(morgan("dev"));
-app.use(express.json());
-app.use(apfRoutes);
-app.use(customerRoutes);
-app.use(accountRoutes);
+app1.use(cors(corsOptions));
 
-app.use('/docs', swaggerUI.serve, swaggerUI.setup(specs))
+app1.use(morgan("dev"));
+app1.use(express.json());
+app1.use(apfRoutes);
+app1.use(customerRoutes);
+app1.use(accountRoutes);
 
-export default app;
+app1.use('/docs', swaggerUI.serve, swaggerUI.setup(specs))
+
+export default app1;
