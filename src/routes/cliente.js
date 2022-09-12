@@ -15,7 +15,7 @@ const router = Router();
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /customer/:id:
  *  get:
  *      summary: Get Customer by ID
  */
@@ -23,7 +23,7 @@ router.get('/customer/:id',getCustomer)
 
 /**
  * @swagger 
- * /tasks:
+ * /customer:
  *  post:
  *      summary: Create new Customer
  */
@@ -31,7 +31,7 @@ router.post('/customer',saveCustomer);
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /customer/:id:
  *  delete:
  *      summary: Delete customer by ID
  */
@@ -39,7 +39,7 @@ router.delete('/customer/:id',deleteCustomer);
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /customer/:id:
  *  put:
  *      summary: Update Customer by ID
  */

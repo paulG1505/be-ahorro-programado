@@ -15,7 +15,7 @@ const router = Router();
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /account/:id:
  *  get:
  *      summary: Get Account by ID
  */
@@ -23,7 +23,7 @@ router.get('/account/:id', getAccountById)
 
 /**
  * @swagger 
- * /tasks:
+ * /account:
  *  post:
  *      summary: Create new Account
  */
@@ -32,7 +32,7 @@ router.post('/account', saveAccount);
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /account/:id:
  *  put:
  *      summary: Update Account by ID
  */

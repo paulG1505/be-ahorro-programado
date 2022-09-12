@@ -15,7 +15,7 @@ const router = Router();
 
 /**
  * @swagger 
- * /tasks:
+ * /apf:
  *   get:
  *     summary: Get Product Financial Saving
  *     description: All parameterization
@@ -24,7 +24,7 @@ router.get('/apf',getParametric);
 
 /**
  * @swagger 
- * /tasks/:id:
+ * /apf/:id:
  *  put:
  *      summary: Update Task
  */
