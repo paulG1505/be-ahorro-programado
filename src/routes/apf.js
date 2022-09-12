@@ -26,7 +26,7 @@ router.get('/apf',getParametric);
  * @swagger 
  * /apf/:id:
  *  put:
- *      summary: Update Task
+ *      summary: Update Product Financial Saving
  */
 router.put('/apf/:id',updateTask)
 
